@@ -1,6 +1,13 @@
+import Main from "../components/Main"
+import BestGearSection from "../components/sections/BestGearSection";
+import HeroSection from './../components/sections/HeroSection';
+
 function HomePage() {
   return (
-    <div>HomePage</div>
+    <Main>
+      <HeroSection/>
+      <BestGearSection/>
+    </Main>
   )
 }
 
