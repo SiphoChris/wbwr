@@ -1,9 +1,11 @@
 import Main from "../components/Main";
 import HeroSection from "./../components/sections/HeroSection";
-import BestGearCard from "../components/cards/PromotionalCard";
-import LatestPromotionsCard from "../components/cards/PromotionalCard";
 import BestGearSection from "../components/sections/PromotionalSection";
 import LatestPromotionsSection from "../components/sections/PromotionalSection";
+import BestGearCard from "../components/cards/PromotionalCard";
+import LatestPromotionsCard from "../components/cards/PromotionalCard";
+import ThemeSection from "../components/sections/ThemeSection";
+import GallerySection from "../components/sections/GallerySection";
 
 import { bestGearCatergories, latestPromotions } from "../constants/data";
 
@@ -20,16 +22,14 @@ function HomePage() {
           <div className="flex">
             {bestGearCatergories.map((category) => (
               <div key={category.id}>
-                <BestGearCard
-                  title={category.title}
-                  imageUrl={category.imageUrl}
-                />
+                <BestGearCard imageUrl={category.imageUrl} />
                 <p>Shop now</p>
               </div>
             ))}
           </div>
         </div>
       </BestGearSection>
+      <ThemeSection />
       <LatestPromotionsSection>
         <div className="flex flex-col space-x-4">
           <div>
@@ -45,6 +45,7 @@ function HomePage() {
           </div>
         </div>
       </LatestPromotionsSection>
+      <GallerySection />
     </Main>
   );
 }
