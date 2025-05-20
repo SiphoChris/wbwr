@@ -1,4 +1,4 @@
-import type { typesForBestGearCatergories } from "../types";
+import type { typesForBestGearCatergories, typesForLatestPromotions } from "../types";
 
 export const bestGearCatergories: typesForBestGearCatergories[] = [
   { id: 1, title: "Train",imageUrl: "/public/images/Train.jpg" },
@@ -7,3 +7,10 @@ export const bestGearCatergories: typesForBestGearCatergories[] = [
   { id: 4, title: "Accessories", imageUrl: "/public/images/Accessories.jpg" },
 ];
 
+
+export const latestPromotions: typesForLatestPromotions[] = [
+    { id: 1, imageUrl: "/public/images/Promo 1.jpg" },
+    { id: 2, imageUrl: "/public/images/Promo 2.jpg" },
+    { id: 3, imageUrl: "/public/images/Promo 3.jpg" },
+    { id: 4, imageUrl: "/public/images/Promo 4.jpg" },
+]

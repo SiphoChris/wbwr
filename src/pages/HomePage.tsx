@@ -1,14 +1,52 @@
-import Main from "../components/Main"
-import BestGearSection from "../components/sections/BestGearSection";
-import HeroSection from './../components/sections/HeroSection';
+import Main from "../components/Main";
+import HeroSection from "./../components/sections/HeroSection";
+import BestGearCard from "../components/cards/PromotionalCard";
+import LatestPromotionsCard from "../components/cards/PromotionalCard";
+import BestGearSection from "../components/sections/PromotionalSection";
+import LatestPromotionsSection from "../components/sections/PromotionalSection";
+
+import { bestGearCatergories, latestPromotions } from "../constants/data";
 
 function HomePage() {
   return (
     <Main>
-      <HeroSection/>
-      <BestGearSection/>
+      <HeroSection />
+      <BestGearSection>
+        <div className="flex flex-col space-x-4">
+          <div>
+            <h3>Our best gear</h3>
+            <p>Unlock your potential with the best UA Gear</p>
+          </div>
+          <div className="flex">
+            {bestGearCatergories.map((category) => (
+              <div key={category.id}>
+                <BestGearCard
+                  title={category.title}
+                  imageUrl={category.imageUrl}
+                />
+                <p>Shop now</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </BestGearSection>
+      <LatestPromotionsSection>
+        <div className="flex flex-col space-x-4">
+          <div>
+            <h3>Discover our latest promotions</h3>
+            <p>Get the best deals on the best gear.</p>
+          </div>
+          <div className="flex">
+            {latestPromotions.map((promotion) => (
+              <div key={promotion.id}>
+                <LatestPromotionsCard imageUrl={promotion.imageUrl} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </LatestPromotionsSection>
     </Main>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;
