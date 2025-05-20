@@ -2,7 +2,7 @@ import { gallery } from "../../constants/data";
 
 function GallerySection() {
   return (
-    <section>
+    <section className="w-10/12 mx-auto">
       <div className="grid grid-cols-2">
         <div>
             <img src={gallery[0].imageUrl} alt="image" />

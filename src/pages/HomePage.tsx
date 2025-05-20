@@ -11,15 +11,15 @@ import { bestGearCatergories, latestPromotions } from "../constants/data";
 
 function HomePage() {
   return (
-    <Main>
+    <>
       <HeroSection />
-      <BestGearSection>
-        <div className="flex flex-col space-x-4">
-          <div>
+      <Main>
+        <BestGearSection>
+          <div className="mb-4">
             <h3>Our best gear</h3>
             <p>Unlock your potential with the best UA Gear</p>
           </div>
-          <div className="flex">
+          <div className="flex space-x-4">
             {bestGearCatergories.map((category) => (
               <div key={category.id}>
                 <BestGearCard imageUrl={category.imageUrl} />
@@ -27,26 +27,24 @@ function HomePage() {
               </div>
             ))}
           </div>
-        </div>
-      </BestGearSection>
-      <ThemeSection />
-      <LatestPromotionsSection>
-        <div className="flex flex-col space-x-4">
+        </BestGearSection>
+        <ThemeSection />
+        <LatestPromotionsSection>
           <div>
             <h3>Discover our latest promotions</h3>
             <p>Get the best deals on the best gear.</p>
           </div>
-          <div className="flex">
+          <div className="flex space-x-4">
             {latestPromotions.map((promotion) => (
               <div key={promotion.id}>
                 <LatestPromotionsCard imageUrl={promotion.imageUrl} />
               </div>
             ))}
           </div>
-        </div>
-      </LatestPromotionsSection>
-      <GallerySection />
-    </Main>
+        </LatestPromotionsSection>
+        <GallerySection />
+      </Main>
+    </>
   );
 }
 
