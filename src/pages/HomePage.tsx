@@ -15,9 +15,9 @@ function HomePage() {
       <HeroSection />
       <Main>
         <BestGearSection>
-          <div className="mb-4">
-            <h3>Our best gear</h3>
-            <p>Unlock your potential with the best UA Gear</p>
+          <div className="mb-6">
+            <h3 className="h3-title">Our best gear</h3>
+            <p className="p-title">Unlock your potential with the best UA Gear</p>
           </div>
           <div className="flex space-x-4">
             {bestGearCatergories.map((category) => (
@@ -30,9 +30,9 @@ function HomePage() {
         </BestGearSection>
         <ThemeSection />
         <LatestPromotionsSection>
-          <div>
-            <h3>Discover our latest promotions</h3>
-            <p>Get the best deals on the best gear.</p>
+          <div className="mb-6">
+            <h3 className="h3-title">Discover our latest promotions</h3>
+            <p className="p-title">Get the best deals on the best gear.</p>
           </div>
           <div className="flex space-x-4">
             {latestPromotions.map((promotion) => (

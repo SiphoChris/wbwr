@@ -18,7 +18,7 @@ export const latestPromotions: typesForLatestPromotions[] = [
 ];
 
 export const gallery = [
-  { imageUrl: "/public/images/desktop/IG Image 1_DT.jpg" },
+  { videoUrl: "/public/videos/ig_video.mp4" },
   { imageUrl: "/public/images/desktop/IG Image 2_DT.jpg" },
   { imageUrl: "/public/images/desktop/IG Image 3_DT.jpg" },
   { imageUrl: "/public/images/desktop/IG Image 4_DT.jpg" },

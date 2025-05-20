@@ -1,15 +1,17 @@
+import VideoPlayer from "../VideoPlayer";
+
 import { gallery } from "../../constants/data";
 
 function GallerySection() {
   return (
-    <section className="w-10/12 mx-auto">
-      <div className="grid grid-cols-2">
-        <div>
-            <img src={gallery[0].imageUrl} alt="image" />
-        </div>
-        <div className="grid grid-cols-2 grid-rows-2">
+    <section>
+      <div className="grid grid-cols-2 gap-4">
+        <VideoPlayer videoUrl={gallery[0].videoUrl!} />
+        <div className="grid grid-cols-2 grid-rows-2 gap-4">
           {gallery.slice(1).map((image, index) => (
-            <img src={image.imageUrl} key={index}/>
+            <div>
+              <img src={image.imageUrl} key={index} className="object-cover object-right" />
+            </div>
           ))}
         </div>
       </div>

@@ -1,6 +1,6 @@
 function PromotionalSection({ children }: React.PropsWithChildren) {
   return (
-    <section className="mx-auto w-10/12">
+    <section>
       <div>{children}</div>
     </section>
   );
