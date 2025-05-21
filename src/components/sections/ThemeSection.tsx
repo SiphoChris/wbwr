@@ -3,14 +3,16 @@ import Form from "../Form";
 function ThemeSection() {
   return (
     <section>
-      <div className="relative">
+      {/* Desktop */}
+      <div className="relative hidden md:block">
         <img src="/public/images/desktop/UA_Theme_2_DT.jpg" alt="theme image" />
+        <Form className="hidden md:block absolute top-1/2 left-10/12 -translate-x-1/2 -translate-y-1/2" />
+      </div>
 
-        {/* Desktop */}
-        <Form className="hidden md:block absolute top-1/2 left-10/12 -translate-x-1/2 -translate-y-1/2"/>
-
-        {/* Mobile */}
-        <Form className="block md:hidden pt-8"/>
+      {/* Mobile */}
+      <div className="relative md:hidden">
+        <img src="/public/images/mobile/UA_Theme_2_MB.jpg" alt="theme image" />
+        <Form className="block md:hidden pt-8" />
       </div>
     </section>
   );
