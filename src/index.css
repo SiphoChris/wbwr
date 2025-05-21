@@ -50,24 +50,24 @@
 
 @font-face {
   font-family: 'Neue Plak Regular';
-  src: url('/public/fonts/Neue-Plak-Regular.ttf') format('truetype');
+  src: url('/fonts/Neue-Plak-Regular.otf') format('truetype');
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Neue Plak SemiBold';
-  src: url('/public/fonts/Neue-Plak-SemiBold.ttf') format('truetype');
+  src: url('/fonts/Neue-Plak-SemiBold.otf') format('truetype');
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Neue Plak Bold';
-  src: url('/public/fonts/Neue-Plak-Bold.ttf') format('truetype');
+  src: url('/fonts/Neue-Plak-Bold.ttf') format('truetype');
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Neue Plak Condensed';
-  src: url('/public/fonts/Neue-Plak-CondBlack.ttf') format('truetype');
+  src: url('/fonts/Neue-Plak-CondBlack.ttf') format('truetype');
   font-style: normal;
 }

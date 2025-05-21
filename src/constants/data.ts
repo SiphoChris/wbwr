@@ -4,23 +4,23 @@ import type {
 } from "../types";
 
 export const bestGearCatergories: typesForBestGearCatergories[] = [
-  { id: 1, title: "Train", imageUrl: "/public/images/Train.jpg" },
-  { id: 2, title: "Run", imageUrl: "/public/images/Run.jpg" },
-  { id: 3, title: "Golf", imageUrl: "/public/images/Golf.jpg" },
-  { id: 4, title: "Accessories", imageUrl: "/public/images/Accessories.jpg" },
+  { id: 1, title: "Train", imageUrl: "/images/Train.jpg" },
+  { id: 2, title: "Run", imageUrl: "/images/Run.jpg" },
+  { id: 3, title: "Golf", imageUrl: "/images/Golf.jpg" },
+  { id: 4, title: "Accessories", imageUrl: "/images/Accessories.jpg" },
 ];
 
 export const latestPromotions: typesForLatestPromotions[] = [
-  { id: 1, imageUrl: "/public/images/Promo 1.jpg" },
-  { id: 2, imageUrl: "/public/images/Promo 2.jpg" },
-  { id: 3, imageUrl: "/public/images/Promo 3.jpg" },
-  { id: 4, imageUrl: "/public/images/Promo 4.jpg" },
+  { id: 1, imageUrl: "/images/Promo 1.jpg" },
+  { id: 2, imageUrl: "/images/Promo 2.jpg" },
+  { id: 3, imageUrl: "/images/Promo 3.jpg" },
+  { id: 4, imageUrl: "/images/Promo 4.jpg" },
 ];
 
 export const gallery = [
-  { videoUrl: "/public/videos/ig_video.mp4" },
-  { imageUrl: "/public/images/desktop/IG Image 2_DT.jpg" },
-  { imageUrl: "/public/images/desktop/IG Image 3_DT.jpg" },
-  { imageUrl: "/public/images/desktop/IG Image 4_DT.jpg" },
-  { imageUrl: "/public/images/desktop/IG Image 5_DT.jpg" },
+  { videoUrl: "/videos/ig_video.mp4" },
+  { imageUrl: "/images/desktop/IG Image 2_DT.jpg" },
+  { imageUrl: "/images/desktop/IG Image 3_DT.jpg" },
+  { imageUrl: "/images/desktop/IG Image 4_DT.jpg" },
+  { imageUrl: "/images/desktop/IG Image 5_DT.jpg" },
 ];

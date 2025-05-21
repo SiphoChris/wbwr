@@ -10,14 +10,14 @@ function HeroSection() {
       <div className="relative">
         {width < 768 ? (
           <VideoPlayer
-            videoUrl="/public/videos/mobile/UA_Theme_1_MB.mp4"
+            videoUrl="/videos/mobile/UA_Theme_1_MB.mp4"
             controls={false}
             loop={true}
             autoPlay={true}
           />
         ) : (
           <VideoPlayer
-            videoUrl="/public/videos/desktop/UA_Theme_1_DT.mp4"
+            videoUrl="/videos/desktop/UA_Theme_1_DT.mp4"
             controls={false}
             loop={true}
             autoPlay={true}
