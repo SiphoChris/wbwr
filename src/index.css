@@ -3,16 +3,26 @@
 @layer utilities {
   .font-plak-regular {
     font-family: "Neue Plak", sans-serif;
+    font-weight: 400;
   }
   .font-plak-semibold {
     font-family: "Neue Plak", sans-serif;
+    font-weight: 600;
   }
   .font-plak-bold {
     font-family: "Neue Plak", sans-serif;
+    font-weight: 800;
   }
 
   .font-plak-condensed {
     font-family: "Neue Plak Condensed", sans-serif;
+    font-weight: 900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply py-4 px-8 bg-black text-white hover:cursor-pointer hover:bg-gray-300 hover:text-black  transition;
   }
 }
 
@@ -21,4 +31,43 @@
   video {
     @apply h-full max-w-full;
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #14141e;
+  }
+  p {
+    color: #2a2a33;
+  }
+}
+
+
+/* typefaces */
+
+@font-face {
+  font-family: 'Neue Plak Regular';
+  src: url('/public/fonts/Neue-Plak-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Plak SemiBold';
+  src: url('/public/fonts/Neue-Plak-SemiBold.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Plak Bold';
+  src: url('/public/fonts/Neue-Plak-Bold.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Plak Condensed';
+  src: url('/public/fonts/Neue-Plak-CondBlack.ttf') format('truetype');
+  font-style: normal;
 }

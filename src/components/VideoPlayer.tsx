@@ -1,7 +1,8 @@
+import type { videoTypes } from "../types"
 
-function VideoPlayer({ videoUrl, controls }: { videoUrl: string, controls: boolean }) {
+function VideoPlayer({ videoUrl, controls, loop, autoPlay }: videoTypes) {
   return (
-    <video autoPlay loop controls={controls} className="w-full">
+    <video autoPlay={autoPlay} loop={loop} controls={controls} className="w-full">
         <source src={videoUrl} type="video/mp4"/>
       </video>
   )

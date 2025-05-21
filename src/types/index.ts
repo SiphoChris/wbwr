@@ -10,3 +10,16 @@ export interface typesForBestGearCatergories extends typesForLatestPromotions {
 export type imageProps = {
   imageUrl: string;
 };
+
+export type videoTypes = {
+  videoUrl: string;
+  controls: boolean;
+  loop: boolean;
+  autoPlay: boolean;
+};
+
+export type buttonProps = {
+  children: React.ReactNode
+  classNames?: string
+}
+
