@@ -6,7 +6,7 @@ function ThemeSection() {
       {/* Desktop */}
       <div className="relative hidden md:block">
         <img src="/public/images/desktop/UA_Theme_2_DT.jpg" alt="theme image" />
-        <Form className="hidden md:block absolute top-1/2 left-10/12 -translate-x-1/2 -translate-y-1/2" />
+        <Form className="hidden lg:block absolute top-1/2 left-10/12 -translate-x-1/2 -translate-y-1/2" />
       </div>
 
       {/* Mobile */}

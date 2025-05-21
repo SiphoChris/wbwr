@@ -6,10 +6,12 @@ type formProps = {
 
 function Form({ className }: formProps) {
   return (
-    <form className={`${className} px-4`}>
-      <div className="space-y-6">
-        <p className="md:text-white font-plak-bold text-[16px]">Project Rock</p>
-        <h2 className="md:text-white font-plak-condensed text-[64px] leading-15">
+    <form className={className}>
+      <div className="space-y-6 px-4 form-text">
+        <p className="md:text-white font-plak-bold text-[14] md:text-[16px]">
+          Project Rock
+        </p>
+        <h2 className="md:text-white font-plak-condensed text-[40px] md:text-[64px] leading-15">
           Every Side <br />
           Of Strong
         </h2>
@@ -20,10 +22,10 @@ function Form({ className }: formProps) {
           are a reflection of the energy we bring to every rep, every set and
           every challenge.
         </p>
+        <Button classNames="max-md:w-full md:bg-transparent border-1 md:border-white hover:bg-white hover:text-black font-plak-regular md:text-[16px]">
+          Shop Project Rock
+        </Button>
       </div>
-      <Button classNames="mt-6 max-md:w-full md:bg-transparent border-1 md:border-white hover:bg-white hover:text-black font-plak-regular md:text-[16px]">
-        Shop Project Rock
-      </Button>
     </form>
   );
 }

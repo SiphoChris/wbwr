@@ -4,8 +4,8 @@ import { gallery } from "../../constants/data";
 
 function GallerySection() {
   return (
-    <section>
-      <div className="mb-6 max-sm:pl-4">
+    <section className="max-sm:px-4">
+      <div className="mb-6">
         <h3 className="text-[20px] md:text-[24px] font-plak-bold">
           What’s happening on Instagram
         </h3>
