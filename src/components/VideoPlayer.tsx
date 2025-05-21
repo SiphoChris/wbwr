@@ -1,7 +1,7 @@
 
-function VideoPlayer({ videoUrl }: { videoUrl: string }) {
+function VideoPlayer({ videoUrl, controls }: { videoUrl: string, controls: boolean }) {
   return (
-    <video autoPlay loop controls className="w-full">
+    <video autoPlay loop controls={controls} className="w-full">
         <source src={videoUrl} type="video/mp4"/>
       </video>
   )

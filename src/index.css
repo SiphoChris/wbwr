@@ -1,13 +1,6 @@
 @import "tailwindcss";
 
 @layer utilities {
-  .h3-title {
-    @apply text-[24px] font-bold;
-  }
-  .p-title {
-    @apply text-[16px] font-normal;
-  }
-
   .font-plak-regular {
     font-family: "Neue Plak", sans-serif;
   }

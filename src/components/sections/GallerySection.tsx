@@ -6,7 +6,7 @@ function GallerySection() {
   return (
     <section>
       <div className="grid grid-cols-2 gap-4">
-        <VideoPlayer videoUrl={gallery[0].videoUrl!} />
+        <VideoPlayer videoUrl={gallery[0].videoUrl!} controls={true} />
         <div className="grid grid-cols-2 grid-rows-2 gap-4">
           {gallery.slice(1).map((image, index) => (
             <div>

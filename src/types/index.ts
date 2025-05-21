@@ -1,15 +1,12 @@
-export type typesForBestGearCatergories = {
-    id: number,
-    title: string,
-    imageUrl: string
+export interface typesForLatestPromotions {
+  id: number;
+  imageUrl: string;
+}
+
+export interface typesForBestGearCatergories extends typesForLatestPromotions {
+  title: string;
 }
 
 export type imageProps = {
-    imageUrl: string;
-}
-
-export type typesForLatestPromotions = {
-    id: number;
-    imageUrl: string;
-}
-
+  imageUrl: string;
+};

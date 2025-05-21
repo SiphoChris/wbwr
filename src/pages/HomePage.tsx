@@ -16,14 +16,14 @@ function HomePage() {
       <Main>
         <BestGearSection>
           <div className="mb-6">
-            <h3 className="h3-title">Our best gear</h3>
-            <p className="p-title">Unlock your potential with the best UA Gear</p>
+            <h3 className="text-[24px] font-plak-bold">Our best gear</h3>
+            <p className="text-[14px] font-plak-regular">Unlock your potential with the best UA Gear</p>
           </div>
           <div className="flex space-x-4">
             {bestGearCatergories.map((category) => (
               <div key={category.id}>
                 <BestGearCard imageUrl={category.imageUrl} />
-                <p>Shop now</p>
+                <p className="mt-2 text-[14px] font-plak-semibold underline">Shop now</p>
               </div>
             ))}
           </div>
@@ -31,8 +31,8 @@ function HomePage() {
         <ThemeSection />
         <LatestPromotionsSection>
           <div className="mb-6">
-            <h3 className="h3-title">Discover our latest promotions</h3>
-            <p className="p-title">Get the best deals on the best gear.</p>
+            <h3 className="text-[24px] font-plak-bold">Discover our latest promotions</h3>
+            <p className="text-[14px] font-plak-regular">Get the best deals on the best gear.</p>
           </div>
           <div className="flex space-x-4">
             {latestPromotions.map((promotion) => (
