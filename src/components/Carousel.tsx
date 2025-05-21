@@ -1,6 +1,12 @@
 import { twMerge } from "tailwind-merge";
+import type {typesForLatestPromotions} from "../types"; 
 
-function Carousel({ data, classNames }) {
+type carouselProps = {
+    data: typesForLatestPromotions[];
+    classNames?: string;
+};
+
+function Carousel({ data, classNames }: carouselProps) {
   return (
     <div className={twMerge("flex overflow-x-auto scroll-snap-x snap-x snap-mandatory space-x-4 px-4", classNames )}>
       {data.map((item) => (
