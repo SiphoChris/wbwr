@@ -8,7 +8,7 @@ function Form({ className }: formProps) {
   return (
     <form className={className}>
       <div className="space-y-6 px-4 form-text">
-        <p className="md:text-white font-plak-bold text-[14] md:text-[16px]">
+        <p className="md:text-white font-plak-bold text-[14] md:text-[16px] -mb-0.5">
           Project Rock
         </p>
         <h2 className="md:text-white font-plak-condensed text-[40px] md:text-[64px] leading-15">
