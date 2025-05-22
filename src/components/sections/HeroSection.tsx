@@ -6,21 +6,22 @@ import VideoPlayer from "../VideoPlayer";
 import { useWindowSize } from "usehooks-ts";
 import { useVideo } from "../../contexts/HeroVideoContext";
 
+// animations
+
 const containerVariants = {
-  hidden: { opacity: 0, y: 0 },
+  hidden: { opacity: 0},
   visible: {
     opacity: 1,
-    y: 0,
     transition: {
       duration: 0.35,
       when: "beforeChildren",
-      staggerChildren: 0.15,
+      staggerChildren: 0.24,
     },
   },
 };
 
 const childVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 22 },
   visible: { opacity: 1, y: 0 },
 };
 
