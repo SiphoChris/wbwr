@@ -35,7 +35,7 @@ function HomePage() {
               {bestGearCatergories.map((category) => (
                 <div
                   key={category.id}
-                  className="hover:scale-[1.025] hover:shadow-lg transition ease-in-out duration-300 pb-4"
+                  className="hover:scale-[1.05] hover:shadow-lg transition ease-in-out duration-300 pb-4"
                 >
                   <BestGearCard imageUrl={category.imageUrl} />
                   <p className="mt-2 text-[14px] font-plak-semibold underline">
@@ -65,7 +65,7 @@ function HomePage() {
                 {latestPromotions.map((promotion) => (
                   <div
                     key={promotion.id}
-                    className="hover:scale-[1.025] hover:shadow-lg transition ease-in-out duration-300"
+                    className="hover:scale-[1.05] hover:shadow-lg transition ease-in-out duration-300"
                   >
                     <LatestPromotionsCard imageUrl={promotion.imageUrl} />
                   </div>
