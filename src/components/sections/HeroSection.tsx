@@ -1,15 +1,13 @@
-import { useEffect } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 import Button from "../ui/Button";
 import VideoPlayer from "../VideoPlayer";
 import { useWindowSize } from "usehooks-ts";
 import { useVideo } from "../../contexts/HeroVideoContext";
 
-// animations
-
 const containerVariants = {
-  hidden: { opacity: 0},
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
@@ -28,6 +26,9 @@ const childVariants = {
 function HeroSection() {
   const { width } = useWindowSize();
   const { setVideoLoaded } = useVideo();
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false, amount: 0.3 });
 
   useEffect(() => {
     setVideoLoaded(false);
@@ -56,10 +57,11 @@ function HeroSection() {
 
         {/* Desktop */}
         <motion.div
+          ref={ref}
           className="hidden md:block absolute top-1/2 left-1/2 md:translate-x-3/12 lg:translate-x-6/12 -translate-y-1/2 space-y-8"
           variants={containerVariants}
           initial="hidden"
-          animate="visible"
+          animate={isInView ? "visible" : "hidden"}
         >
           <motion.h1
             variants={childVariants}
@@ -80,7 +82,7 @@ function HeroSection() {
           </motion.div>
         </motion.div>
 
-        {/* Mobile */}
+        {/* Mobile Content */}
         <div className="space-y-6 md:hidden px-4 pt-8">
           <h1 className="text-5xl leading-12 font-plak-condensed">
             CHECK OUT OUR <br /> LATEST GEAR
