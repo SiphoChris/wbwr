@@ -1,9 +1,17 @@
+import { useEffect } from "react";
+
 import Button from "../ui/Button";
 import VideoPlayer from "../VideoPlayer";
 import { useWindowSize } from "usehooks-ts";
+import { useVideo } from "../../contexts/HeroVideoContext";
 
 function HeroSection() {
   const { width } = useWindowSize();
+  const { setVideoLoaded } = useVideo();
+
+  useEffect(() => {
+    setVideoLoaded(false);
+  }, [width, setVideoLoaded]);
 
   return (
     <section className="mb-[60px]">
@@ -14,6 +22,7 @@ function HeroSection() {
             controls={false}
             loop={true}
             autoPlay={true}
+            muted={true}
           />
         ) : (
           <VideoPlayer
@@ -21,12 +30,13 @@ function HeroSection() {
             controls={false}
             loop={true}
             autoPlay={true}
+            muted={true}
           />
         )}
 
         {/* Desktop */}
-        <div className="hidden md:block absolute top-1/2 lg:left-1/2 md:translate-x-3/12 lg:translate-x-5/12 -translate-y-1/2 space-y-8">
-          <h1 className="md:text-5xl md:leading-10 lg:text-[86px] lg:leading-18 font-plak-condensed">
+        <div className="hidden md:block absolute top-1/2 lg:left-1/2 md:translate-x-3/12 lg:translate-x-6/12 -translate-y-1/2 space-y-8">
+          <h1 className="md:text-5xl md:leading-10 lg:leading-18 lg:text-[86px] font-plak-condensed">
             CHECK <br /> OUT OUR <br /> LATEST <br /> GEAR
           </h1>
           <p className="md:text-[11px] lg:text-[12px] font-plak-regular">

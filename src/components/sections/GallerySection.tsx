@@ -14,14 +14,17 @@ function GallerySection() {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
-        <VideoPlayer videoUrl={gallery[0].videoUrl!} controls={true} loop={true} autoPlay={false} />
+        <VideoPlayer
+          videoUrl={gallery[0].videoUrl!}
+          controls={true}
+          loop={true}
+          autoPlay={false}
+          muted={false}
+        />
         <div className="grid grid-cols-2 grid-rows-2 gap-4">
           {gallery.slice(1).map((image, index) => (
             <div key={index}>
-              <img
-                src={image.imageUrl}
-                className="object-cover object-right"
-              />
+              <img src={image.imageUrl} className="object-cover object-right" />
             </div>
           ))}
         </div>
