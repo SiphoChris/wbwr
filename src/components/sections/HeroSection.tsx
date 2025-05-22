@@ -14,7 +14,7 @@ function HeroSection() {
   }, [width, setVideoLoaded]);
 
   return (
-    <section className="mb-[60px]">
+    <section className="mb-[40px] md:mb-[60px]">
       <div className="relative">
         {width < 768 ? (
           <VideoPlayer
@@ -35,7 +35,7 @@ function HeroSection() {
         )}
 
         {/* Desktop */}
-        <div className="hidden md:block absolute top-1/2 lg:left-1/2 md:translate-x-3/12 lg:translate-x-6/12 -translate-y-1/2 space-y-8">
+        <div className="hidden md:block absolute top-1/2 left-1/2 md:translate-x-3/12 lg:translate-x-6/12 -translate-y-1/2 space-y-8">
           <h1 className="md:text-5xl md:leading-10 lg:leading-18 lg:text-[86px] font-plak-condensed">
             CHECK <br /> OUT OUR <br /> LATEST <br /> GEAR
           </h1>
