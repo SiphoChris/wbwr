@@ -28,3 +28,8 @@ export type carouselProps = {
     classNames?: string;
 };
 
+export type videoContextType = {
+  videoLoaded: boolean;
+  setVideoLoaded: (value: boolean) => void;
+};
+

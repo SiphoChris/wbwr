@@ -1,12 +1,8 @@
 import { createContext, useState, useContext } from "react";
 import type { ReactNode } from "react";
+import type { videoContextType } from "../types";
 
-type VideoContextType = {
-  videoLoaded: boolean;
-  setVideoLoaded: (value: boolean) => void;
-};
-
-const HeroVideoContext = createContext<VideoContextType | null>(null);
+const HeroVideoContext = createContext<videoContextType | null>(null);
 
 type ProviderProps = {
   children: ReactNode;
