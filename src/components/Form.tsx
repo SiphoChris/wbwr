@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Button from "./ui/Button";
-import { useWindowSize } from "usehooks-ts";
 
 type formProps = {
   className?: string;
@@ -15,22 +14,14 @@ const container = {
   },
 };
 
+const child = {
+  initial: { opacity: 0, x: -50 },
+  animate: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
 function Form({ className }: formProps) {
-  const { width } = useWindowSize();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.5 });
-
-  // Use width of the browser to define direction of the animation
-  const isMobile = width < 768;
-
-  const getChildVariant = () => ({
-    initial: { opacity: 0, ...(isMobile ? { y: 50 } : { x: 50 }) },
-    animate: {
-      opacity: 1,
-      ...(isMobile ? { y: 0 } : { x: 0 }),
-      transition: { duration: 0.5, ease: "easeOut" },
-    },
-  });
 
   return (
     <motion.form
@@ -42,20 +33,20 @@ function Form({ className }: formProps) {
     >
       <motion.div className="space-y-6 px-4 form-text">
         <motion.p
-          variants={getChildVariant()}
+          variants={child}
           className="md:text-white font-plak-bold text-[14px] md:text-[16px] -mb-0.5"
         >
           Project Rock
         </motion.p>
         <motion.h2
-          variants={getChildVariant()}
+          variants={child}
           className="md:text-white font-plak-condensed text-[40px] md:text-[64px] leading-10 lg:leading-14"
         >
           Every Side <br />
           Of Strong
         </motion.h2>
         <motion.p
-          variants={getChildVariant()}
+          variants={child}
           className="md:text-white font-plak-regular text-[14px] lg:w-[46ch]"
         >
           The Underground collection is inspired by the idea of a Project Rock
@@ -64,7 +55,7 @@ function Form({ className }: formProps) {
           are a reflection of the energy we bring to every rep, every set and
           every challenge.
         </motion.p>
-        <motion.div variants={getChildVariant()}>
+        <motion.div variants={child}>
           <Button classNames="max-md:w-full md:bg-transparent border-1 md:border-white hover:bg-white hover:text-black font-plak-regular md:text-[16px]">
             Shop Project Rock
           </Button>
