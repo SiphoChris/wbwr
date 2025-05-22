@@ -15,13 +15,13 @@ const container = {
 };
 
 const child = {
-  initial: { opacity: 0, x: -100 },
-  animate: { opacity: 1, x: 0, transition: { duration: 0.35, ease: "easeOut" } },
+  initial: { opacity: 0, x: -50 },
+  animate: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
 function Form({ className }: formProps) {
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: false, amount: 0.5 });
 
   return (
     <motion.form
