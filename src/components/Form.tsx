@@ -11,7 +11,7 @@ function Form({ className }: formProps) {
         <p className="md:text-white font-plak-bold text-[14] md:text-[16px] -mb-0.5">
           Project Rock
         </p>
-        <h2 className="md:text-white font-plak-condensed text-[40px] md:text-[64px] leading-15">
+        <h2 className="md:text-white font-plak-condensed text-[40px] md:text-[64px] md:leading-10 lg:leading-18">
           Every Side <br />
           Of Strong
         </h2>

@@ -16,10 +16,15 @@ export type videoTypes = {
   controls: boolean;
   loop: boolean;
   autoPlay: boolean;
+  muted: boolean
 };
 
 export type buttonProps = {
   children: React.ReactNode
   classNames?: string
 }
+export type carouselProps = {
+    data: typesForLatestPromotions[];
+    classNames?: string;
+};
 

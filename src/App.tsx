@@ -1,12 +1,15 @@
 import Nav from "./components/NavBar";
 import HomePage from "./pages/HomePage";
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
+import { HeroVideoProvider } from "./contexts/HeroVideoContext";
 
 function App() {
   return (
     <>
       <Nav />
-      <HomePage />
+      <HeroVideoProvider>
+        <HomePage />
+      </HeroVideoProvider>
       <Footer />
     </>
   );

@@ -1,10 +1,5 @@
 import { twMerge } from "tailwind-merge";
-import type {typesForLatestPromotions} from "../types"; 
-
-type carouselProps = {
-    data: typesForLatestPromotions[];
-    classNames?: string;
-};
+import type { carouselProps } from "../types"; 
 
 function Carousel({ data, classNames }: carouselProps) {
   return (
